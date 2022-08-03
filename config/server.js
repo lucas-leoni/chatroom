@@ -1,5 +1,4 @@
 // parametrizando nossas libs
-
 const express = require('express');
 const consign = require('consign');
 const expressValidator = require('express-validator');
@@ -14,6 +13,8 @@ app.set('views', './app/views');
 app.use(express.static('./app/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+app.use(expressValidator());
 
 // autoload routes, controllers, models for objects app
 consign()
