@@ -23,11 +23,11 @@ io.on('connection', (socket) => {
       apelido: data.apelido,
       mensagem: data.mensagem,
     });
-  });
-
-  // disparando uma mensagem para todos os usuários
-  socket.broadcast.emit('msgParaCliente', {
-    apelido: data.apelido,
-    mensagem: data.mensagem,
+  
+    // disparando uma mensagem para todos os usuários
+    socket.broadcast.emit('msgParaCliente', {
+      apelido: data.apelido,
+      mensagem: data.mensagem,
+    });
   });
 });

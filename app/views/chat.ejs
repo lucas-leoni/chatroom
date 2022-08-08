@@ -110,7 +110,8 @@
 									type="text"
 									class="form-control"
 									placeholder="Mensagem"
-									name="mensagem">
+									name="mensagem"
+									id="mensagem">
 
 									<input
 										type="text"
@@ -140,7 +141,7 @@
 			$('#enviar_mensagem').click(() => {
 				socket.emit('msgParaServidor', {
 					apelido: $('#apelido').val(),
-					mensagem: $('mensagem').val(),
+					mensagem: $('#mensagem').val(),
 				});
 
 				/* let fieldMessage = document.querySelector('#mensagem');
